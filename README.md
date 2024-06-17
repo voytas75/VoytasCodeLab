@@ -8,4 +8,8 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 Calculates the cyclomatic complexity of functions in a given PowerShell script or code block.
 
-Current version: [Powershell gallery]()
+[![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/Get-CyclomaticComplexity)](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
+
+Published version: [Powershell gallery](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
+
+[Source code](./thecode/Get-CyclomaticComplexity.ps1)
