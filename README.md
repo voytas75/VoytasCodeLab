@@ -4,7 +4,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 ## The Code
 
-### [Get-CyclomaticComplexity](./thecode/Get-CyclomaticComplexity.ps1)
+### Get-CyclomaticComplexity
 
 Calculates the cyclomatic complexity of functions in a given PowerShell script or code block.
 
