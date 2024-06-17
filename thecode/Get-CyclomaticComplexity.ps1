@@ -3,7 +3,7 @@
 .GUID 74b3a6a0-ec1b-459e-869a-5cafe8f744e3
 .AUTHOR https://github.com/voytas75
 .TAGS Cyclomatic, Complexity, Script, Function
-.PROJECTURI 
+.PROJECTURI https://github.com/voytas75/VoytasCodeLab#get-cyclomaticcomplexity
 .RELEASENOTES
 1.0.1: initializing.
 #>
