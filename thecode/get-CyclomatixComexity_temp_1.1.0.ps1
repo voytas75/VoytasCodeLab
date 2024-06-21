@@ -1,12 +1,14 @@
 <#PSScriptInfo
-.VERSION 1.1.0
+.VERSION 2.0.1
 .DESCRIPTION Calculates the cyclomatic complexity of a PowerShell script or code block, including both functions and top-level code.
 .GUID 74b3a6a0-ec1b-459e-869a-5cafe8f744e3
 .AUTHOR https://github.com/voytas75
-.TAGS Cyclomatic, Complexity, Script, Function
+.TAGS Cyclomatic, Complexity, Script, Function, code
 .PROJECTURI https://github.com/voytas75/VoytasCodeLab#get-cyclomaticcomplexity
 .RELEASENOTES
+2.0.1: Added functionality to create objects from complexity data for easier manipulation and default sorting by complexity in decreasing order.
 1.1.0: Added analysis of top-level code outside of functions.
+1.0.1: initializing.
 #>
 
 function Get-CyclomaticComplexity {
@@ -38,6 +40,7 @@ function Get-CyclomaticComplexity {
         Get-CyclomaticComplexity -CodeBlock $code
     .NOTES
         Author: https://github.com/voytas75
+        Helper: gpt4o
         Date: 2024-06-21
     #>
     param(
@@ -75,6 +78,9 @@ function Get-CyclomaticComplexity {
     # Initialize total complexity for the script
     $totalComplexity = 1
 
+    # Initialize an array to store complexity data
+    $complexityData = @()
+
     # Calculate complexity for functions
     foreach ($function in $functions) {
         $functionComplexity = 1
@@ -87,12 +93,16 @@ function Get-CyclomaticComplexity {
             }
         }
 
-        # Output function complexity
-        Write-Output "$($function.Name) : $functionComplexity - $(Get-ComplexityDescription $functionComplexity)"
+        # Add function complexity to the array
+        $complexityData += [PSCustomObject]@{
+            Name       = $function.Name
+            Complexity = $functionComplexity
+            Description = Get-ComplexityDescription -complexity $functionComplexity
+        }
     }
 
     # Calculate complexity for top-level code (code outside of functions)
-    $globalTokens = $tokens | Where-Object { 
+    $globalTokens = $tokens | Where-Object {
         $global = $true
         foreach ($function in $functions) {
             if ($_.Extent.StartOffset -ge $function.Extent.StartOffset -and $_.Extent.EndOffset -le $function.Extent.EndOffset) {
@@ -109,8 +119,15 @@ function Get-CyclomaticComplexity {
         }
     }
 
-    # Output global complexity
-    Write-Output "Global : $totalComplexity - $(Get-ComplexityDescription $totalComplexity)"
+    # Add global complexity to the array
+    $complexityData += [PSCustomObject]@{
+        Name       = "Global (code outside of functions)"
+        Complexity = $totalComplexity
+        Description = Get-ComplexityDescription -complexity $totalComplexity
+    }
+
+    # Sort the complexity data by Complexity in descending order and output
+    $complexityData | Sort-Object -Property Complexity -Descending | Format-Table -AutoSize
 }
 
 # Helper function to get complexity description
