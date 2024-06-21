@@ -27,3 +27,11 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
         "@
     Get-CyclomaticComplexity -CodeBlock $code
     ```
+
+    ```powershell
+    Get-CyclomaticComplexity -CodeBlock (Get-Content "D:\path\to\file.ps1" -raw)
+    ```
+
+    ```powershell
+    Get-CyclomaticComplexity -FilePath "C:\path\to\file.ps1"
+    ```
