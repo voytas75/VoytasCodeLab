@@ -1,11 +1,12 @@
 <#PSScriptInfo
-.VERSION 2.0.1
+.VERSION 2.0.2
 .DESCRIPTION Calculates the cyclomatic complexity of a PowerShell script or code block, including both functions and top-level code.
 .GUID 74b3a6a0-ec1b-459e-869a-5cafe8f744e3
 .AUTHOR https://github.com/voytas75
 .TAGS Cyclomatic, Complexity, Script, Function, code
 .PROJECTURI https://github.com/voytas75/VoytasCodeLab#get-cyclomaticcomplexity
 .RELEASENOTES
+2.0.2: add links.
 2.0.1: Added functionality to create objects from complexity data for easier manipulation and default sorting by complexity in decreasing order.
 1.1.0: Added analysis of top-level code outside of functions.
 1.0.1: initializing.
@@ -42,6 +43,10 @@ function Get-CyclomaticComplexity {
         Author: https://github.com/voytas75
         Helper: gpt4o
         Date: 2024-06-21
+    .LINK
+        https://mathieubuisson.github.io/measuring-powershell-code-complexity/
+        https://github.com/voytas75/VoytasCodeLab#get-cyclomaticcomplexity
+        https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-cyclomatic-complexity?view=vs-2022
     #>
     param(
         [Parameter(Mandatory = $false)]
