@@ -42,8 +42,8 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     The script uses both built-in PowerShell capabilities and .NET classes to generate random numbers. It showcases different ways to generate random numbers as UInt64 and UInt32, both as a full range and a fractional number between 0 and 1.
 
-    > [!NOTE]
-    > If you need random numbers for cryptographic purposes, it's recommended to use classes from "System.Security.Cryptography", such as "RandomNumberGenerator", which provides cryptographic strength random number generation.
+> [!NOTE]
+> If you need random numbers for cryptographic purposes, it's recommended to use classes from "System.Security.Cryptography", such as "RandomNumberGenerator", which provides cryptographic strength random number generation.
 
     [](https://www.linkedin.com/feed/update/urn:li:activity:7149346690402074624?utm_source=share&utm_medium=member_desktop)
 
