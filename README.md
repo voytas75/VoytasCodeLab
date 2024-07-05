@@ -35,3 +35,17 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     ```powershell
     Get-CyclomaticComplexity -FilePath "C:\path\to\file.ps1"
     ```
+
+2. ### Random numbers
+
+    A script to generate a series of random numbers using different methods and formats.
+
+    The script uses both built-in PowerShell capabilities and .NET classes to generate random numbers. It showcases different ways to generate random numbers as UInt64 and UInt32, both as a full range and a fractional number between 0 and 1.
+
+    > [!NOTE]
+    > If you need random numbers for cryptographic purposes, it's recommended to use classes from "System.Security.Cryptography", such as "RandomNumberGenerator", which provides cryptographic strength random number generation.
+
+    [](https://www.linkedin.com/feed/update/urn:li:activity:7149346690402074624?utm_source=share&utm_medium=member_desktop)
+
+    [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
+
