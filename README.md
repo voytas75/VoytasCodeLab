@@ -46,7 +46,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     > If you need random numbers for cryptographic purposes, it's recommended to use classes from "System.Security.Cryptography", such as "RandomNumberGenerator", which provides cryptographic strength random number generation.
     >
 
-    [](https://www.linkedin.com/feed/update/urn:li:activity:7149346690402074624?utm_source=share&utm_medium=member_desktop)
+    [Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:7149346690402074624?utm_source=share&utm_medium=member_desktop)
 
     [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
