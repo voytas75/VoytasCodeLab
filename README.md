@@ -51,3 +51,26 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
+3. ### Convert-YouTubeTranscript
+
+    Converts a YouTube transcript into a structured format with timestamps and corresponding text.
+
+    This script takes a YouTube transcript ([glasp.co - transcript extension](https://glasp.co/)) as input and extracts the timestamps and their corresponding text. It returns an array of custom objects, each containing a timestamp and the associated text.
+
+    **Example**
+
+    ```powershell
+    $transcript = @"
+    (00:00) on September 1st last year a team of 16 scientists made a stunning discovery that sent shock waves through the scientific Community they ...
+    (05:52) essentially cease to exist for them they are momentary in a sense passing through the fabric of SpaceTime without experiencing the passage ...
+    (10:09) unfolding this concept becomes even more exciting when applied to photons or particles of light photons have no clear past present or future ...
+    (12:24) basic assumptions of The Big Bang Theory
+    "@
+
+    $results = Convert-YouTubeTranscript -transcript $transcript
+    $results | Format-Table -AutoSize
+    ```
+
+    [Source code](./thecode/Convert-YouTubeTranscript.ps1)
+
+    [transcript extension](https://glasp.co/)
