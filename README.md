@@ -6,7 +6,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 ## The Code
 
-1. ### [Get-CyclomaticComplexity](./thecode/Get-CyclomaticComplexity.ps1)
+1. ### [Get-CyclomaticComplexity](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
 
     [PowerShell]
 
