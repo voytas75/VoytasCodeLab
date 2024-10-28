@@ -94,13 +94,13 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     ```text
     IdentityReference                            ActiveDirectoryRight       ExtendedRightName     ExtendedRightGUID
     -----------------                            --------------------       -----------------     -----------------
-    UDT\TASK-T2-User-ResetPassword                      ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
-    UDT\TASK-T2-User-Move                               ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
-    UDT\TASK-T2-User-DisableEnable                      WriteProperty          N/A                N/A                                 
-    UDT\TASK-T2-User-MemberOf                           WriteProperty          N/A                N/A                                 
-    UDT\TASK-T2-User-ResetPassword        ReadProperty, WriteProperty          N/A                N/A                                 
-    UDT\TASK-T2-User-Move                    CreateChild, DeleteChild          N/A                N/A                                 
-    UDT\TASK-T2-User-Move                               WriteProperty          N/A                N/A                                 
+    XYZ\TASK-T2-User-ResetPassword                      ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
+    XYZ\TASK-T2-User-Move                               ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
+    XYZ\TASK-T2-User-DisableEnable                      WriteProperty          N/A                N/A                                 
+    XYZ\TASK-T2-User-MemberOf                           WriteProperty          N/A                N/A                                 
+    XYZ\TASK-T2-User-ResetPassword        ReadProperty, WriteProperty          N/A                N/A                                 
+    XYZ\TASK-T2-User-Move                    CreateChild, DeleteChild          N/A                N/A                                 
+    XYZ\TASK-T2-User-Move                               WriteProperty          N/A                N/A                                 
     ```
 
     [Source code](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
