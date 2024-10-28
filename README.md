@@ -6,7 +6,9 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 ## The Code
 
-1. ### Get-CyclomaticComplexity
+1. ### [Get-CyclomaticComplexity](./thecode/Get-CyclomaticComplexity.ps1)
+
+    [PowerShell]
 
     Calculates the cyclomatic complexity of a PowerShell script or code block, including both functions and top-level code.
 
@@ -38,7 +40,9 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     Get-CyclomaticComplexity -FilePath "C:\path\to\file.ps1"
     ```
 
-2. ### Random numbers
+2. ### [Random numbers](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
+
+   [PowerShell]
 
     A script to generate a series of random numbers using different methods and formats.
 
@@ -51,7 +55,9 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
-3. ### Convert-YouTubeTranscript
+3. ### [Convert-YouTubeTranscript](./thecode/Convert-YouTubeTranscript.ps1)
+
+   [PowerShell]
 
     Converts a YouTube transcript into a structured format with timestamps and corresponding text.
 
@@ -74,3 +80,27 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     [Source code](./thecode/Convert-YouTubeTranscript.ps1)
 
     [transcript extension](https://glasp.co/)
+
+4. ### [Get-ADUserACLsAndExtendedRights](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
+
+   [PowerShell]
+
+    Retrieves the Access Control List (ACL) and Extended Rights for a specified Active Directory user.
+
+    This script fetches the ACL for a user object in Active Directory and maps any Extended Rights GUIDs to their corresponding names. It outputs the ACL entries in a formatted table.
+
+    **Example**
+
+    ```text
+    IdentityReference                            ActiveDirectoryRight       ExtendedRightName     ExtendedRightGUID
+    -----------------                            --------------------       -----------------     -----------------
+    UDT\TASK-T2-User-ResetPassword                      ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
+    UDT\TASK-T2-User-Move                               ExtendedRight          Reset Password     00299570-246d-11d0-a768-00aa006e0529
+    UDT\TASK-T2-User-DisableEnable                      WriteProperty          N/A                N/A                                 
+    UDT\TASK-T2-User-MemberOf                           WriteProperty          N/A                N/A                                 
+    UDT\TASK-T2-User-ResetPassword        ReadProperty, WriteProperty          N/A                N/A                                 
+    UDT\TASK-T2-User-Move                    CreateChild, DeleteChild          N/A                N/A                                 
+    UDT\TASK-T2-User-Move                               WriteProperty          N/A                N/A                                 
+    ```
+
+    [Source code](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
