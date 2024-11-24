@@ -6,7 +6,30 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 ## The Code
 
-1. ### [Get-CyclomaticComplexity](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
+1. ### [CrewAI News Analyzer](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
+
+    [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)]
+
+    The `crewai-PROD-News_analyzer_A2_v2.py` script is designed to run CrewAI for comprehensive news search and analysis. This script allows users to specify a topic for analysis and provides various modes such as planning and manager modes. It utilizes configurations and tools from the CrewAI framework to perform detailed analysis and generate professional reports.
+
+    **Key Features:**
+    - **Topic Analysis**: Specify a topic for in-depth news analysis.
+    - **Multiple Modes**: Enable planning and manager modes for hierarchical or sequential processing.
+    - **Verbose Output**: Option to enable detailed output for better insights.
+    - **Result Count**: Specify the number of web results per provider to retrieve.
+    - **Caching and Memory Options**: Enable or disable caching and memory for the crew.
+    - **Agent-Based Tasks**: Utilizes specialized agents for tasks such as web search, data verification, trend analysis, and report writing.
+    - **Markdown Reports**: Generates structured markdown-formatted reports with detailed sections including trends, findings, recommendations, and timelines.
+
+    **Example Usage:**
+
+    ```python
+    python crewai-PROD-News_analyzer_A2_v2.py --topic "What's new in Windows Server" --planning --verbose --result_count 5
+    ```
+
+    **Source Code**: [crewai-PROD-News_analyzer_A2_v2.py](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
+
+2. ### [Get-CyclomaticComplexity](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
 
     [PowerShell]
 
@@ -40,7 +63,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     Get-CyclomaticComplexity -FilePath "C:\path\to\file.ps1"
     ```
 
-2. ### [Random numbers](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
+3. ### [Random numbers](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
    [PowerShell]
 
@@ -55,7 +78,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
-3. ### [Convert-YouTubeTranscript](./thecode/Convert-YouTubeTranscript.ps1)
+4. ### [Convert-YouTubeTranscript](./thecode/Convert-YouTubeTranscript.ps1)
 
    [PowerShell]
 
@@ -81,7 +104,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [transcript extension](https://glasp.co/)
 
-4. ### [Get-ADUserACLsAndExtendedRights](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
+5. ### [Get-ADUserACLsAndExtendedRights](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
 
    [PowerShell]
 
