@@ -8,7 +8,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 1. ### [CrewAI News Analyzer](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
 
-    [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)]
+    [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)] [Azure OpenaAI]
 
     The `crewai-PROD-News_analyzer_A2_v2.py` script is designed to run CrewAI for comprehensive news search and analysis. This script allows users to specify a topic for analysis and provides various modes such as planning and manager modes. It utilizes configurations and tools from the CrewAI framework to perform detailed analysis and generate professional reports.
 
