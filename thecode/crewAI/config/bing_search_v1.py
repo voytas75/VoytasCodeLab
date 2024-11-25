@@ -1,5 +1,20 @@
+#!/usr/bin/env python
+"""
+bing_search_v1.py: This script is designed to perform web searches using the Bing Search API. 
+It allows users to specify a search query and various parameters to refine the search results. 
+The script utilizes configurations and tools from the CrewAI framework to perform the operations and generate responses. 
+This tool is for the CrewAI framework.
+author: https://github.com/voytas75
+repo: https://github.com/voytas75/VoytasCodeLab
+"""
+
+__author__ = 'https://github.com/voytas75'
+__name__ = 'Bing Web Search Tool'
+
+
 import requests
 import os
+
 from typing import Annotated
 from crewai_tools import Tool, BaseTool
 from pydantic import BaseModel, Field

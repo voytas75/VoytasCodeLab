@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+"""
+AOAIChroma_tool.py: This script is designed to integrate Azure OpenAI and ChromaDB for generating responses with memory. 
+It allows users to specify a prompt and user ID for memory retrieval and storage, and provides options for the number of memory records to retrieve. 
+The script utilizes configurations and tools from the CrewAI framework to perform the operations and generate responses. 
+This tool is for the CrewAI framework.
+author: https://github.com/voytas75
+repo: https://github.com/voytas75/VoytasCodeLab
+"""
+
+__author__ = 'https://github.com/voytas75'
+__name__ = 'Azure OpenAI and ChromaDB tool'
+
+
 import os
 import chromadb
 import litellm
