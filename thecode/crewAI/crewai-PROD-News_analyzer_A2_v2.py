@@ -19,14 +19,13 @@ import sys
 import argparse
 
 from crewai import Agent, Task, Crew, Process
-from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
 from config.config import (
     initialize_tools,
     current_date,
     current_readable_date,
     log_file,
-    callback_function,
+    task_callback_function,
     step_callback_function,
     raport_base_folder,
     llm_balanced,
@@ -35,23 +34,13 @@ from config.config import (
     llm_creative,
     llm_deterministic,
     llm_exploratory,
-    author
+    author,
+    print_time_taken,
+    embedder_config,
 )
 
 
-# region FUNCTIONS
-
-def print_time_taken(time_taken):
-    """Prints the time taken to execute the crew."""
-    if time_taken < 60:
-        print("Time taken to execute crew: less than 1 minute")
-    else:
-        print(f"Time taken to execute crew: {time_taken / 60:.2f} minutes")
-
-# endregion
-
-
-#region Configuration
+#region CONFIGURATION
 
 parser = argparse.ArgumentParser(description="Run CrewAI for News Search.")
 parser.add_argument("--topic", type=str, help="Specify the topic to analyze in News")
@@ -793,14 +782,7 @@ crew = Crew(
     manager_agent = manager,
     cache=args.nocache,
     memory=args.nomemory,
-    embedder=OpenAIEmbeddingFunction(
-        api_key=os.getenv("AZURE_API_KEY"),
-        api_base=os.getenv("AZURE_API_BASE"),
-        api_type="azure",
-        api_version=os.getenv("AZURE_API_VERSION"),
-        model_name=os.getenv("AZURE_OPENAI_EMBEDDED_MODEL"),
-        deployment_id=os.getenv("AZURE_OPENAI_EMBEDDED_DEPLOYMENT"),
-    ),    
+    embedder=embedder_config if args.nomemory else None, 
     planning=args.planning, planning_llm=llm_creative,
     #step_callback=step_callback_function,
     #task_callback=callback_function,

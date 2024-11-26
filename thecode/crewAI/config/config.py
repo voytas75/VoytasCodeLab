@@ -171,6 +171,18 @@ def create_llm_config(temperature, top_p, frequency_penalty, presence_penalty):
 
 load_dotenv()
 
+#embedder
+embedder_config = {
+    "provider": "azure",
+    "config": {
+        "api_key": os.getenv("AZURE_OPENAI_API_KEY"),
+        "api_base": os.getenv("AZURE_OPENAI_ENDPOINT"),
+        "api_type": "azure",
+        "api_version": os.getenv("AZURE_API_VERSION"),
+        "model_name": os.getenv("AZURE_OPENAI_EMBEDDED_MODEL"),
+        "deployment_id": os.getenv("AZURE_OPENAI_EMBEDDED_DEPLOYMENT"),
+    }
+}
 
 #print("In module products sys.path[0], __package__ ==", sys.path[0], __package__)
 
@@ -187,6 +199,7 @@ current_date=datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 current_readable_date = datetime.now().strftime('%B %d, %Y')
 log_file = f"LOG_crew_{current_date}.log"
 #raport_base_folder = input("Enter the base folder for the report: ").strip()
+
 if os.path.exists("/path/to/A/"):
     raport_base_folder = "/path/to/A/"
 elif os.path.exists("/path/to/B/"):
