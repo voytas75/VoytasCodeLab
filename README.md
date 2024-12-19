@@ -6,7 +6,20 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
 ## The Code
 
-1. ### [CrewAI Tech Discussion Assistant](./thecode/crewAI/crewai-PROD-TechDiscussionAssistant.py)
+1. ### [Google Knowledge Graph Search Tool](./thecode/crewAI/config/google_KGS_tool.py)
+
+    [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)] [[Google Knowledge Graph API](https://developers.google.com/knowledge-graph/)]
+
+    The `google_KGS_tool.py` script is designed to perform searches using the Google Knowledge Graph Search API. 
+
+    **Key Features:**
+    - **Search Query**: Specify a literal string to search for in the Knowledge Graph.
+    - **Result Limit**: Limits the number of entities to be returned. Maximum is 500. Default is 10.
+    - **Language Support**: Specify the list of language codes to run the query with.
+    - **Type Restriction**: Restricts returned entities to those of the specified types.
+    - **Prefix Match**: Enables prefix (initial substring) match against names and aliases of entities.
+
+2. ### [CrewAI Tech Discussion Assistant](./thecode/crewAI/crewai-PROD-TechDiscussionAssistant.py)
 
     [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)] [Azure OpenAI]
 
@@ -29,7 +42,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     **Source Code**: [crewai-PROD-TechDiscussionAssistant.py](./thecode/crewAI/crewai-PROD-TechDiscussionAssistant.py)
 
-2. ### [CrewAI News Analyzer](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
+3. ### [CrewAI News Analyzer](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
 
     [Python] [[CrewAI](https://github.com/crewAIInc/crewAI)] [Azure OpenaAI]
 
@@ -52,7 +65,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     **Source Code**: [crewai-PROD-News_analyzer_A2_v2.py](./thecode/crewAI/crewai-PROD-News_analyzer_A2_v2.py)
 
-3. ### [Get-CyclomaticComplexity](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
+4. ### [Get-CyclomaticComplexity](https://www.powershellgallery.com/packages/Get-CyclomaticComplexity)
 
     [PowerShell]
 
@@ -86,7 +99,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     Get-CyclomaticComplexity -FilePath "C:\path\to\file.ps1"
     ```
 
-4. ### [Random numbers](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
+5. ### [Random numbers](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
    [PowerShell]
 
@@ -101,7 +114,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [random.ps1](https://gist.github.com/voytas75/9010339feae5f2c16aab3b4e4db6c801)
 
-5. ### [Convert-YouTubeTranscript](./thecode/Convert-YouTubeTranscript.ps1)
+6. ### [Convert-YouTubeTranscript](./thecode/Convert-YouTubeTranscript.ps1)
 
    [PowerShell]
 
@@ -127,7 +140,7 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
 
     [transcript extension](https://glasp.co/)
 
-6. ### [Get-ADUserACLsAndExtendedRights](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
+7. ### [Get-ADUserACLsAndExtendedRights](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
 
    [PowerShell]
 
