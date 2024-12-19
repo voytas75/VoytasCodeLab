@@ -35,7 +35,8 @@ from .Newsdata_tool import LatestNewsTool
 from .TavilyAI_tool import TavilySearchGeneralTool, TavilySearchNewsTool, TavilyContextTool, TavilyQnATool
 from .custom_pdf_tool import CustomPDFReadTool
 from .AOAIChroma_tool import AzureOpenAIChromaTool 
-from .serpapi_Google_tools import OrganicSearchTool, KnowledgeGraphTool 
+from .serpapi_Google_tools import OrganicSearchTool, KnowledgeGraphTool
+from .google_KGS_tool import GoogleKnowledgeGraphSearchTool, GoogleKnowledgeGraphSearchJSONTool
 from dotenv import load_dotenv
 from tavily import TavilyClient
 from crewai import LLM
@@ -154,6 +155,8 @@ def initialize_tools():
         'nlp_search': AzureOpenAIChromaTool(),
         'serpapi_google': OrganicSearchTool(),
         'serpapi_google_kg': KnowledgeGraphTool(), # google knowledge graph
+        'google_kg': GoogleKnowledgeGraphSearchTool(),  
+        'google_kg_json': GoogleKnowledgeGraphSearchJSONTool(),
     }
    
 def create_llm_config(temperature, top_p, frequency_penalty, presence_penalty):
