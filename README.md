@@ -163,3 +163,19 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     ```
 
     [Source code](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
+$CURSOR$
+
+8. ### Five heuristics for when git worktree is worth it (and when it’s not)
+
+   1. **You have more than one task in parallel (feature + hotfix + experiment) → worth it.**
+       If you always do one small task end-to-end → probably not.
+   2. **You often get blocked by “cannot switch branch, dirty working tree” → worth it.**  
+       If you rarely use stash and switching branches is painless → less needed.
+   3. **Builds/dependencies are heavy or conflict (node_modules, venv, build cache) → worth it, because each folder has its own state.**  
+       If the repo is lightweight → smaller gain.
+   4. **You want ultra-clean PRs/commits (no “while I’m here” changes) → worth it.**  
+       If you work without PR/review and you don’t care much → optional.
+   5. **You return to tasks after days/weeks → worth it, because the folder itself preserves context.**  
+       If you usually finish things the same day → optional.
+
+    **Rule of thumb:** worktrees shine the moment you think “I’ll pause this and do something else” — instead of stashing, you spin up another folder.
