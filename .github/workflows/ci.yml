@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  powershell-static-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse representative scripts
+        shell: pwsh
+        run: |
+          $targets = @(
+            './thecode/Convert-YouTubeTranscript.ps1',
+            './thecode/Get-ADUserACLsAndExtendedRights.ps1',
+            './thecode/Get-CyclomaticComplexity.ps1'
+          )
+
+          foreach ($path in $targets) {
+            $parseErrors = $null
+            $tokens = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $path), [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors.Count -gt 0) {
+              $parseErrors | ForEach-Object { Write-Error ("{0}: {1}" -f $path, $_.Message) }
+              exit 1
+            }
+          }
+
+          Write-Host 'Representative PowerShell parse checks passed.'
+
+# Intentionally lightweight:
+# - validates a representative subset of standalone scripts
+# - avoids fake runtime claims for a mixed code lab repository

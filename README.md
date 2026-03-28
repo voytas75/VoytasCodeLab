@@ -163,7 +163,6 @@ Explore a diverse collection of my scripts, snippets, and functions across multi
     ```
 
     [Source code](./thecode/Get-ADUserACLsAndExtendedRights.ps1)
-$CURSOR$
 
 8. ### Five heuristics for when git worktree is worth it (and when it’s not)
 
